@@ -7,7 +7,7 @@ img { display:block; max-width:100%; }
 .brand, .navbar div { display:flex; align-items:center; gap:14px; font-weight:800; }
 .brand span { width:36px; height:36px; display:grid; place-items:center; border-radius:var(--radius); background:var(--dark); color:#fff; }
 .navbar a { font-weight:700; }
-.hero { position:relative; overflow:hidden; min-height:580px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr); gap:46px; align-items:center; padding:46px max(18px,calc((100vw - 1180px)/2)); color:#fff; background:linear-gradient(135deg, rgba(17,24,39,.88), rgba(63,63,70,.74)), url('/images/hero-showroom.png') center/cover; }
+.hero { position:relative; overflow:hidden; min-height:580px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr); gap:46px; align-items:center; padding:46px max(18px,calc((100vw - 1180px)/2)); color:#fff; background:linear-gradient(135deg, rgba(17,24,39,.88), rgba(63,63,70,.74)), url('../images/hero-showroom.png') center/cover; }
 .hero::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:54px 54px; animation:grid 16s linear infinite; pointer-events:none; }
 .hero-copy, .hero-card { position:relative; z-index:1; }
 .eyebrow { display:inline-flex; align-items:center; gap:8px; color:var(--brand); font-size:.78rem; font-weight:800; text-transform:uppercase; }

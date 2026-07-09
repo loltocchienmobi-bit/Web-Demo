@@ -1,18 +1,16 @@
-import './styles.css';
-
 const products = [
-  ['Pô độ SH 150i', 1850000, 'Pô xe máy', 'Honda', 'SH 150i', 'Pô thiết kế thể thao, âm thanh uy lực, phù hợp cho xe SH 150i.', '/images/product-exhaust.png', true],
-  ['Bình ắc quy xe máy 12V', 420000, 'Ắc quy', 'Honda/Yamaha', 'Nhiều dòng xe', 'Bình ắc quy chất lượng ổn định, phù hợp nhiều mẫu xe tay ga và xe số.', '/images/product-battery.png', true],
-  ['Lọc gió độ Winner X', 260000, 'Lọc gió', 'Honda', 'Winner X', 'Lọc gió lưu lượng cao, hỗ trợ xe thoáng máy và phản hồi ga tốt hơn.', '/images/hero-showroom.png', false],
-  ['Phuộc sau bình dầu Exciter', 1250000, 'Phuộc xe', 'Yamaha', 'Exciter 150/155', 'Phuộc sau bình dầu tăng độ ổn định, phù hợp đi phố và đi tour nhẹ.', '/images/hero-showroom.png', true],
-  ['Heo dầu trước 2 piston', 890000, 'Phanh xe', 'Universal', 'Nhiều dòng xe', 'Heo dầu trước lực bóp ổn định, hoàn thiện kim loại chắc chắn.', '/images/product-exhaust.png', false],
-  ['Đĩa thắng trước CNC', 520000, 'Phanh xe', 'Universal', 'Vario, Air Blade, SH Mode', 'Đĩa thắng CNC thoát nhiệt tốt, thiết kế thể thao, dễ lắp đặt.', '/images/hero-showroom.png', false],
-  ['Bao tay cao su chống trượt', 95000, 'Phụ kiện', 'Universal', 'Nhiều dòng xe', 'Bao tay mềm, bám tốt, giảm mỏi tay khi chạy xe hằng ngày.', '/images/product-battery.png', false],
-  ['Gương gù tay lái nhôm', 330000, 'Phụ kiện', 'Universal', 'Naked bike, scooter', 'Gương gù tay lái vỏ nhôm, góc nhìn rộng, dáng gọn hiện đại.', '/images/hero-showroom.png', true],
-  ['Nhông sên dĩa Sirius', 380000, 'Truyền động', 'Yamaha', 'Sirius', 'Bộ nhông sên dĩa bền, vận hành êm, phù hợp thay thế định kỳ.', '/images/product-exhaust.png', false],
-  ['Đèn trợ sáng bi LED mini', 690000, 'Đèn xe', 'Universal', 'Nhiều dòng xe', 'Đèn trợ sáng nhỏ gọn, ánh sáng gom tốt, phù hợp đi đêm và đi tour.', '/images/hero-showroom.png', true],
-  ['Dầu nhớt tổng hợp 10W40', 185000, 'Bảo dưỡng', 'Universal', 'Xe số, xe côn tay', 'Dầu nhớt tổng hợp giúp máy êm, ổn định nhiệt và bảo vệ động cơ.', '/images/product-battery.png', false],
-  ['Bugi Iridium xe tay ga', 210000, 'Bảo dưỡng', 'Honda/Yamaha', 'Xe tay ga', 'Bugi Iridium đánh lửa ổn định, hỗ trợ xe đề nhẹ và tiết kiệm nhiên liệu.', '/images/product-exhaust.png', false]
+  ['Pô độ SH 150i', 1850000, 'Pô xe máy', 'Honda', 'SH 150i', 'Pô thiết kế thể thao, âm thanh uy lực, phù hợp cho xe SH 150i.', 'images/product-exhaust.png', true],
+  ['Bình ắc quy xe máy 12V', 420000, 'Ắc quy', 'Honda/Yamaha', 'Nhiều dòng xe', 'Bình ắc quy chất lượng ổn định, phù hợp nhiều mẫu xe tay ga và xe số.', 'images/product-battery.png', true],
+  ['Lọc gió độ Winner X', 260000, 'Lọc gió', 'Honda', 'Winner X', 'Lọc gió lưu lượng cao, hỗ trợ xe thoáng máy và phản hồi ga tốt hơn.', 'images/hero-showroom.png', false],
+  ['Phuộc sau bình dầu Exciter', 1250000, 'Phuộc xe', 'Yamaha', 'Exciter 150/155', 'Phuộc sau bình dầu tăng độ ổn định, phù hợp đi phố và đi tour nhẹ.', 'images/hero-showroom.png', true],
+  ['Heo dầu trước 2 piston', 890000, 'Phanh xe', 'Universal', 'Nhiều dòng xe', 'Heo dầu trước lực bóp ổn định, hoàn thiện kim loại chắc chắn.', 'images/product-exhaust.png', false],
+  ['Đĩa thắng trước CNC', 520000, 'Phanh xe', 'Universal', 'Vario, Air Blade, SH Mode', 'Đĩa thắng CNC thoát nhiệt tốt, thiết kế thể thao, dễ lắp đặt.', 'images/hero-showroom.png', false],
+  ['Bao tay cao su chống trượt', 95000, 'Phụ kiện', 'Universal', 'Nhiều dòng xe', 'Bao tay mềm, bám tốt, giảm mỏi tay khi chạy xe hằng ngày.', 'images/product-battery.png', false],
+  ['Gương gù tay lái nhôm', 330000, 'Phụ kiện', 'Universal', 'Naked bike, scooter', 'Gương gù tay lái vỏ nhôm, góc nhìn rộng, dáng gọn hiện đại.', 'images/hero-showroom.png', true],
+  ['Nhông sên dĩa Sirius', 380000, 'Truyền động', 'Yamaha', 'Sirius', 'Bộ nhông sên dĩa bền, vận hành êm, phù hợp thay thế định kỳ.', 'images/product-exhaust.png', false],
+  ['Đèn trợ sáng bi LED mini', 690000, 'Đèn xe', 'Universal', 'Nhiều dòng xe', 'Đèn trợ sáng nhỏ gọn, ánh sáng gom tốt, phù hợp đi đêm và đi tour.', 'images/hero-showroom.png', true],
+  ['Dầu nhớt tổng hợp 10W40', 185000, 'Bảo dưỡng', 'Universal', 'Xe số, xe côn tay', 'Dầu nhớt tổng hợp giúp máy êm, ổn định nhiệt và bảo vệ động cơ.', 'images/product-battery.png', false],
+  ['Bugi Iridium xe tay ga', 210000, 'Bảo dưỡng', 'Honda/Yamaha', 'Xe tay ga', 'Bugi Iridium đánh lửa ổn định, hỗ trợ xe đề nhẹ và tiết kiệm nhiên liệu.', 'images/product-exhaust.png', false]
 ].map((item, index) => ({
   id: index + 1,
   name: item[0],
@@ -24,7 +22,7 @@ const products = [
   image: item[6],
   featured: item[7],
   stock: 8 + index * 3,
-  images: [item[6], '/images/hero-showroom.png', index % 2 ? '/images/product-battery.png' : '/images/product-exhaust.png']
+  images: [item[6], 'images/hero-showroom.png', index % 2 ? 'images/product-battery.png' : 'images/product-exhaust.png']
 }));
 
 const currency = value => value.toLocaleString('vi-VN') + ' đ';
@@ -55,7 +53,7 @@ function home() {
         <label class="search"><i data-lucide="search"></i><input id="searchInput" placeholder="Tìm pô, ắc quy, lọc gió..."></label>
         <div class="stats"><div><strong>${products.length}</strong><span>Sản phẩm</span></div><div><strong>${products.filter(p => p.featured).length}</strong><span>Nổi bật</span></div><div><strong>${categories.length}</strong><span>Danh mục</span></div></div>
       </div>
-      <div class="hero-card"><div class="scanner"></div><img src="/images/hero-showroom.png" alt="Showroom phụ tùng"></div>
+      <div class="hero-card"><div class="scanner"></div><img src="images/hero-showroom.png" alt="Showroom phụ tùng"></div>
     </section>
     <main class="section">
       <div class="heading"><div><span class="eyebrow">Catalog</span><h2>Sản phẩm mới nhất</h2></div><div class="pills">${categories.map(c => `<span>${c}</span>`).join('')}</div></div>
