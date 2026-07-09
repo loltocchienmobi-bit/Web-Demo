@@ -1,0 +1,32 @@
+{
+  "name": "motoparts-shop",
+  "version": "1.0.0",
+  "description": "Motorbike parts shop with admin/user roles using Node.js, Express, MongoDB, and EJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build:demo": "vite --config deploy-demo/vite.config.js",
+    "seed": "node seed/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.9.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "vite": "^7.1.11"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}

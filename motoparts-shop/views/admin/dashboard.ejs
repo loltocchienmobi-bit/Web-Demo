@@ -1,0 +1,32 @@
+<section class="container admin-shell">
+  <div class="admin-heading">
+    <div>
+      <span class="eyebrow">Quản trị</span>
+      <h1>Dashboard</h1>
+    </div>
+    <div class="admin-actions">
+      <a class="btn-ghost" href="/"><i data-lucide="external-link"></i> Xem website</a>
+      <a class="btn-main" href="/admin/products/new"><i data-lucide="plus"></i> Thêm sản phẩm</a>
+    </div>
+  </div>
+
+  <div class="metric-grid">
+    <div class="metric-card"><i data-lucide="package"></i><span>Sản phẩm</span><strong><%= productCount %></strong></div>
+    <div class="metric-card"><i data-lucide="star"></i><span>Nổi bật</span><strong><%= featuredCount %></strong></div>
+    <div class="metric-card"><i data-lucide="triangle-alert"></i><span>Sắp hết hàng</span><strong><%= lowStockCount %></strong></div>
+    <div class="metric-card"><i data-lucide="users"></i><span>Người dùng</span><strong><%= userCount %></strong></div>
+  </div>
+
+  <div class="admin-command-grid">
+    <a href="/admin/products" class="command-card">
+      <i data-lucide="boxes"></i>
+      <strong>Quản lý sản phẩm</strong>
+      <span>Thêm, sửa, xóa, cập nhật giá và hình ảnh.</span>
+    </a>
+    <a href="/admin/settings" class="command-card">
+      <i data-lucide="settings"></i>
+      <strong>Cài đặt website</strong>
+      <span>Logo, link liên hệ, Facebook, Zalo, TikTok, Shopee.</span>
+    </a>
+  </div>
+</section>

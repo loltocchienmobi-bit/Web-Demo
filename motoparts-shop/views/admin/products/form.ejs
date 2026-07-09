@@ -1,0 +1,37 @@
+<section class="container admin-shell">
+  <div class="admin-heading">
+    <div>
+      <span class="eyebrow">Sản phẩm</span>
+      <h1><%= product._id ? 'Sửa sản phẩm' : 'Thêm sản phẩm' %></h1>
+    </div>
+    <a class="btn-ghost" href="/admin/products"><i data-lucide="arrow-left"></i> Quay lại</a>
+  </div>
+
+  <form method="POST" action="<%= formAction %>" enctype="multipart/form-data" class="form-card">
+    <div class="form-grid">
+      <label><span>Tên sản phẩm</span><input name="name" required value="<%= product.name || '' %>" placeholder="Pô độ SH 150i"></label>
+      <label><span>Giá bán</span><input name="price" type="number" min="0" required value="<%= product.price || '' %>" placeholder="1850000"></label>
+      <label><span>Danh mục</span><input name="category" required value="<%= product.category || '' %>" placeholder="Pô xe máy"></label>
+      <label><span>Hãng xe</span><input name="brand" required value="<%= product.brand || '' %>" placeholder="Honda"></label>
+      <label><span>Dòng xe</span><input name="bikeModel" required value="<%= product.bikeModel || '' %>" placeholder="SH 150i"></label>
+      <label><span>Tồn kho</span><input name="stock" type="number" min="0" value="<%= product.stock || 0 %>"></label>
+    </div>
+    <label class="full-field"><span>Mô tả</span><textarea name="description" rows="5" required placeholder="Mô tả công dụng, tình trạng, dòng xe phù hợp..."><%= product.description || '' %></textarea></label>
+    <div class="form-grid two">
+      <label><span>Ảnh sản phẩm</span><input type="file" name="images" accept="image/*" multiple></label>
+      <label class="check-field"><input type="checkbox" name="featured" <%= product.featured ? 'checked' : '' %>><span>Đánh dấu sản phẩm nổi bật</span></label>
+    </div>
+    <% const currentImages = (product.images && product.images.length ? product.images : [product.image]).filter(Boolean); %>
+    <% if (currentImages.length) { %>
+      <div class="image-preview-list">
+        <% currentImages.forEach((image, index) => { %>
+          <div class="image-preview"><img src="<%= image %>" alt="<%= product.name || 'Preview' %>"><span>Ảnh <%= index + 1 %></span></div>
+        <% }) %>
+      </div>
+    <% } %>
+    <div class="form-actions">
+      <button class="btn-main" type="submit"><i data-lucide="save"></i> Lưu sản phẩm</button>
+      <a href="/admin/products" class="btn-ghost">Hủy</a>
+    </div>
+  </form>
+</section>

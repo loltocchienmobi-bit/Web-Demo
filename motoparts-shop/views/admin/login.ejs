@@ -1,0 +1,21 @@
+<section class="auth-shell">
+  <div class="auth-card">
+    <div class="auth-brand"><span><i data-lucide="shield-check"></i></span> Bảng quản trị</div>
+    <h1>Đăng nhập quản trị</h1>
+    <p>Quản lý sản phẩm, hình ảnh, tồn kho và cấu hình liên hệ của website.</p>
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <form method="POST" action="/admin/login" class="stack-form">
+      <label>
+        <span>Username</span>
+        <input type="text" name="username" required autocomplete="username" placeholder="admin">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" required autocomplete="current-password" placeholder="admin123">
+      </label>
+      <button class="btn-main w-100" type="submit"><i data-lucide="log-in"></i> Đăng nhập</button>
+    </form>
+  </div>
+</section>

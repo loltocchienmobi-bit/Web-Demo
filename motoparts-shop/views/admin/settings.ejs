@@ -1,0 +1,25 @@
+<section class="container admin-shell">
+  <div class="admin-heading">
+    <div>
+      <span class="eyebrow">Cấu hình</span>
+      <h1>Cài đặt website</h1>
+    </div>
+    <a class="btn-ghost" href="/admin"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+  </div>
+
+  <form method="POST" action="/admin/settings" class="form-card">
+    <div class="form-grid">
+      <label><span>Tên website</span><input name="websiteName" value="<%= setting.websiteName || '' %>"></label>
+      <label><span>Logo text</span><input name="logoText" value="<%= setting.logoText || '' %>"></label>
+      <label><span>Link liên hệ chính</span><input name="contactLink" value="<%= setting.contactLink || '' %>"></label>
+      <label><span>Nhãn nút liên hệ</span><input name="contactLabel" value="<%= setting.contactLabel || '' %>"></label>
+      <label><span>Facebook</span><input name="facebookLink" value="<%= setting.facebookLink || '' %>"></label>
+      <label><span>Zalo</span><input name="zaloLink" value="<%= setting.zaloLink || '' %>"></label>
+      <label><span>TikTok</span><input name="tiktokLink" value="<%= setting.tiktokLink || '' %>"></label>
+      <label><span>Shopee</span><input name="shopeeLink" value="<%= setting.shopeeLink || '' %>"></label>
+    </div>
+    <div class="form-actions">
+      <button class="btn-main" type="submit"><i data-lucide="save"></i> Lưu cài đặt</button>
+    </div>
+  </form>
+</section>

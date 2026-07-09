@@ -1,0 +1,51 @@
+<section class="container admin-shell">
+  <div class="admin-heading">
+    <div>
+      <span class="eyebrow">Kho hàng</span>
+      <h1>Quản lý sản phẩm</h1>
+    </div>
+    <a class="btn-main" href="/admin/products/new"><i data-lucide="plus"></i> Thêm sản phẩm</a>
+  </div>
+
+  <div class="table-card">
+    <div class="table-responsive">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Sản phẩm</th>
+            <th>Danh muc</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Trạng thái</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% products.forEach(p => { %>
+            <tr>
+              <td>
+                <div class="product-cell">
+                  <img src="<%= p.image %>" alt="<%= p.name %>">
+                  <div><strong><%= p.name %></strong><span><%= p.brand %> / <%= p.bikeModel %></span></div>
+                </div>
+              </td>
+              <td><%= p.category %></td>
+              <td><strong><%= p.price.toLocaleString('vi-VN') %> đ</strong></td>
+              <td><span class="<%= p.stock <= 5 ? 'stock-low' : 'stock-ok' %>"><%= p.stock %></span></td>
+              <td><span class="status-pill <%= p.featured ? 'hot' : '' %>"><%= p.featured ? 'Nổi bật' : 'Thường' %></span></td>
+              <td class="text-end">
+                <a href="/admin/products/<%= p._id %>/edit" class="icon-button" aria-label="Sửa"><i data-lucide="pencil"></i></a>
+                <form action="/admin/products/<%= p._id %>?_method=DELETE" method="POST" class="d-inline" onsubmit="return confirm('Xóa sản phẩm này?')">
+                  <button class="icon-button danger" aria-label="Xóa"><i data-lucide="trash-2"></i></button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+          <% if (!products.length) { %>
+            <tr><td colspan="6"><div class="empty-state small">Chưa có sản phẩm nào.</div></td></tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

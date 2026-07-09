@@ -1,0 +1,58 @@
+<% const galleryImages = (product.images && product.images.length ? product.images : [product.image]).filter(Boolean); %>
+<section class="container detail-shell">
+  <a class="back-link" href="/"><i data-lucide="arrow-left"></i> Quay lại catalog</a>
+  <div class="detail-grid">
+    <div class="detail-gallery">
+      <div class="detail-media">
+        <% if (product.featured) { %><span class="badge-hot">Nổi bật</span><% } %>
+        <button class="gallery-nav prev" type="button" aria-label="Ảnh trước"><i data-lucide="chevron-left"></i></button>
+        <img id="mainProductImage" src="<%= galleryImages[0] %>" alt="<%= product.name %>">
+        <button class="gallery-nav next" type="button" aria-label="Ảnh tiếp theo"><i data-lucide="chevron-right"></i></button>
+      </div>
+      <div class="thumb-strip" data-gallery>
+        <% galleryImages.forEach((image, index) => { %>
+          <button class="thumb-button <%= index === 0 ? 'active' : '' %>" type="button" data-image="<%= image %>" aria-label="Xem ảnh <%= index + 1 %>">
+            <img src="<%= image %>" alt="<%= product.name %> ảnh <%= index + 1 %>">
+          </button>
+        <% }) %>
+      </div>
+    </div>
+    <div class="detail-info">
+      <span class="eyebrow"><%= product.category %></span>
+      <h1><%= product.name %></h1>
+      <div class="detail-price"><%= product.price.toLocaleString('vi-VN') %> đ</div>
+      <p class="detail-description"><%= product.description %></p>
+      <div class="spec-grid">
+        <div><span>Hãng xe</span><strong><%= product.brand %></strong></div>
+        <div><span>Dòng xe</span><strong><%= product.bikeModel %></strong></div>
+        <div><span>Tồn kho</span><strong><%= product.stock %></strong></div>
+        <div><span>Tình trạng</span><strong><%= product.stock > 0 ? 'Còn hàng' : 'Hết hàng' %></strong></div>
+      </div>
+      <div class="detail-actions">
+        <a href="<%= setting.contactLink || '/contact' %>" target="_blank" rel="noopener" class="btn-main"><i data-lucide="message-circle"></i> <%= setting.contactLabel || 'Liên hệ mua hàng' %></a>
+        <a href="/" class="btn-ghost"><i data-lucide="store"></i> Xem thêm</a>
+      </div>
+    </div>
+  </div>
+
+  <% if (relatedProducts && relatedProducts.length) { %>
+    <div class="section-heading related-heading">
+      <div>
+        <span class="eyebrow">Cùng danh mục</span>
+        <h2>Sản phẩm liên quan</h2>
+      </div>
+    </div>
+    <div class="product-grid compact">
+      <% relatedProducts.forEach(item => { %>
+        <article class="product-card reveal-card">
+          <a class="product-media" href="/product/<%= item._id %>"><img src="<%= item.image %>" alt="<%= item.name %>"></a>
+          <div class="product-body">
+            <div class="product-meta"><%= item.brand %></div>
+            <h3><a href="/product/<%= item._id %>"><%= item.name %></a></h3>
+            <div class="product-bottom"><strong><%= item.price.toLocaleString('vi-VN') %> đ</strong></div>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  <% } %>
+</section>
