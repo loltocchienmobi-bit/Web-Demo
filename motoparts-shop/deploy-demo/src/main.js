@@ -49,7 +49,7 @@ function home() {
       <div class="hero-copy">
         <span class="eyebrow"><i data-lucide="sparkles"></i>Cửa hàng phụ tùng xe máy 4.0</span>
         <h1>Phụ tùng tốt, lên xe gọn, chốt đơn nhanh.</h1>
-        <p>Website demo hiện đại cho shop phụ tùng xe máy, có catalog, ảnh sản phẩm, gallery và hiệu ứng sinh động.</p>
+        <p>MotoParts cam kết phụ tùng chính hãng, tư vấn đúng đời xe, giá minh bạch và giao hàng nhanh cho mọi khách hàng.</p>
         <label class="search"><i data-lucide="search"></i><input id="searchInput" placeholder="Tìm pô, ắc quy, lọc gió..."></label>
         <div class="stats"><div><strong>${products.length}</strong><span>Sản phẩm</span></div><div><strong>${products.filter(p => p.featured).length}</strong><span>Nổi bật</span></div><div><strong>${categories.length}</strong><span>Danh mục</span></div></div>
       </div>
