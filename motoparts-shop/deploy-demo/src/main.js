@@ -1,16 +1,16 @@
 const products = [
-  ['VinFast VF3 6 bi Laser', 10950000, 12500000, 'Đèn ô tô', 'VinFast', 'VF3', 'Gói nâng cấp 6 bi Laser cho VF3, ánh sáng mạnh, gom sáng tốt và giữ thẩm mỹ zin xe.', 'images/hero-showroom.png', true, 'Giảm 12%'],
-  ['VinFast VF3 Bi Gầm Titan Black', 11500000, 13000000, 'Đèn gầm', 'VinFast', 'VF3', 'Bi gầm Titan Black tăng sáng mặt đường, hỗ trợ đi mưa sương và đường tối.', 'images/product-exhaust.png', true, 'Bán chạy'],
-  ['Bi Laser LED X-Light V30 Ultra 2024', 7700000, 8900000, 'Bi Laser LED', 'X-Light', 'Universal', 'Mẫu bi Laser LED cao cấp, cắt sáng sắc, pha xa mạnh và vận hành ổn định.', 'images/product-battery.png', true, 'Giảm 13%'],
-  ['Bi Led Laser X-Light V20L 2024', 6600000, 7800000, 'Bi Laser LED', 'X-Light', 'Universal', 'Bi LED Laser cân bằng giữa độ sáng, độ bền và chi phí nâng cấp.', 'images/hero-showroom.png', false, 'Trả góp 0%'],
-  ['Bi Led X-Light F10 New', 5200000, 6200000, 'Bi LED', 'X-Light', 'Universal', 'Bi LED F10 New cho ánh sáng rộng, dễ căn chỉnh, phù hợp nhiều dòng xe.', 'images/product-exhaust.png', false, 'Giảm 16%'],
-  ['Bi LED X-Light F10 Turbo', 6200000, 7200000, 'Bi LED', 'X-Light', 'Universal', 'Phiên bản Turbo cải thiện cường độ sáng và vùng chiếu gần.', 'images/product-battery.png', true, 'Turbo'],
-  ['Bi LED X-Light F10 2.0', 4600000, 5500000, 'Bi LED', 'X-Light', 'Universal', 'Giải pháp nâng sáng gọn, hiệu quả cho xe đi phố và đường trường.', 'images/hero-showroom.png', false, 'Giá tốt'],
-  ['Bi Gầm X-Light F10 New', 3900000, 4600000, 'Đèn gầm', 'X-Light', 'Universal', 'Bi gầm hỗ trợ quan sát tốt hơn khi trời mưa, sương mù hoặc đường thiếu sáng.', 'images/product-exhaust.png', false, 'Lắp nhanh'],
-  ['Bi Laser X-Light M500 Ultra 2024', 8700000, 9900000, 'Bi Laser LED', 'X-Light', 'Universal', 'Bi Laser Ultra cho dải sáng xa, phù hợp khách cần hiệu năng cao.', 'images/product-battery.png', true, 'Ultra'],
-  ['Bi LED X-Light M550 Pro 2024', 7200000, 8300000, 'Bi LED', 'X-Light', 'Universal', 'M550 Pro có ánh sáng đều, thiết kế tản nhiệt tốt, dùng ổn định lâu dài.', 'images/hero-showroom.png', false, 'Pro'],
-  ['Bi LED X-Light M30 2024', 3900000, 4800000, 'Bi LED', 'X-Light', 'Universal', 'Mẫu bi LED phổ thông, phù hợp nâng cấp ánh sáng với ngân sách hợp lý.', 'images/product-exhaust.png', false, 'Tiết kiệm'],
-  ['Bi Gầm Aozoom Titan Black', 5600000, 6500000, 'Đèn gầm', 'Aozoom', 'Universal', 'Bi gầm Titan Black thiết kế mạnh mẽ, ánh sáng bám đường và thẩm mỹ cao.', 'images/product-battery.png', true, 'Titan Black']
+  ['Đèn bóng Led Nexway Vision X8 Pro', 2500000, 3000000, 'Bóng LED', 'Nexway', 'Universal', 'Bóng LED nâng cấp cho xe nguyên bản, cho ánh sáng trắng rõ, dễ lắp đặt và phù hợp khách muốn tăng sáng nhanh mà không can thiệp nhiều vào chóa đèn.', 'images/chungauto/den-bong-led-nexway-vision-x8-pro.jpg', true, 'Mới ra mắt', 'Phù hợp xe cần nâng sáng cơ bản, giữ kết cấu zin, chi phí hợp lý. Ánh sáng trắng giúp quan sát biển báo, vạch đường và vật cản rõ hơn khi đi đêm.'],
+  ['Đèn bi Led Nexway Vision LS600', 2500000, 3000000, 'Bi LED', 'Nexway', 'Universal', 'Bi LED LS600 là lựa chọn nâng cấp ánh sáng gọn gàng, có mặt cắt sáng rõ, hỗ trợ đi phố và đường trường với độ ổn định tốt.', 'images/chungauto/den-bi-led-nexway-ls600.jpg', true, 'Giảm 17%', 'Sản phẩm hướng đến nhóm khách cần hiệu năng sáng tốt trong tầm giá. Thiết kế bi cầu giúp ánh sáng tập trung hơn bóng LED thường và hạn chế tản sáng gây chói.'],
+  ['Đèn bi gầm Nexway Vision V7 Platinum', 4500000, 5400000, 'Đèn gầm', 'Nexway', 'Universal', 'Bi gầm V7 Platinum hỗ trợ ánh sáng gầm mạnh, hữu ích khi đi mưa, sương mù hoặc cung đường thiếu sáng.', 'images/chungauto/den-bi-gam-vision-v7-platinum.jpg', true, 'Giảm 17%', 'Dòng bi gầm này phù hợp xe có nhu cầu tăng sáng mặt đường gần, mở rộng vùng quan sát hai bên và cải thiện an toàn khi di chuyển trong điều kiện thời tiết xấu.'],
+  ['Đèn bi Led Nexway Vision LS500', 4500000, 5500000, 'Bi LED', 'Nexway', 'Universal', 'LS500 là mẫu bi LED có cấu hình cân bằng giữa độ sáng, độ bền và chi phí, phù hợp nhiều dòng xe phổ thông.', 'images/chungauto/den-bi-led-nexway-ls500.jpg', false, 'Giảm 18%', 'Sản phẩm phù hợp khách cần nâng cấp đèn pha/cos ổn định, ánh sáng gom tốt hơn hệ thống nguyên bản và vẫn giữ thiết kế xe gọn gàng.'],
+  ['Đèn bi Led Vision Nex 1.8', 4000000, 5500000, 'Bi LED', 'Vision', 'Universal', 'Vision Nex 1.8 là mẫu bi LED kích thước gọn, dễ bố trí trên nhiều dòng xe, cho ánh sáng rõ và mặt cắt đẹp.', 'images/chungauto/den-bi-led-vision-nex-18.jpg', false, 'Giảm 27%', 'Kích thước nhỏ giúp sản phẩm phù hợp các hốc đèn hạn chế không gian. Đây là lựa chọn hợp lý khi muốn nâng sáng nhưng vẫn ưu tiên độ gọn và tính thẩm mỹ.'],
+  ['Đèn LED Ô Tô Owleye A360/S3', 5500000, 7500000, 'Bóng LED', 'Owleye', 'Universal', 'Owleye A360/S3 là bóng LED hiệu năng cao, hỗ trợ tăng sáng nhanh cho xe dùng bóng halogen nguyên bản.', 'images/chungauto/den-led-owleye-a360-s3.jpg', true, 'Giảm 23%', 'Sản phẩm phù hợp khách muốn thay bóng LED chất lượng cao, ánh sáng mạnh và ổn định hơn. Nên căn chỉnh đúng để đạt hiệu quả chiếu sáng và hạn chế chói.'],
+  ['Đèn LED Ô Tô Owleye A488', 2300000, 3000000, 'Bóng LED', 'Owleye', 'Universal', 'Owleye A488 là lựa chọn bóng LED dễ tiếp cận, tăng độ sáng cho xe đi phố và hỗ trợ quan sát tốt hơn ban đêm.', 'images/chungauto/den-led-owleye-a488.jpg', false, 'Giảm 29%', 'Dòng bóng LED này phù hợp nhu cầu nâng cấp vừa phải, chi phí hợp lý, lắp đặt nhanh và vẫn giữ hệ thống đèn nguyên bản của xe.'],
+  ['Đèn LED Ô Tô Owleye A360/Q5', 2500000, 3500000, 'Bóng LED', 'Owleye', 'Universal', 'Owleye A360/Q5 cho ánh sáng trắng, độ sáng tốt trong tầm giá và phù hợp nhiều dòng xe đang dùng bóng nguyên bản.', 'images/chungauto/den-led-owleye-a360-q5.jpg', false, 'Giảm 22%', 'Sản phẩm phù hợp xe cần cải thiện tầm nhìn khi đi đêm mà chưa cần nâng cấp bi cầu. Hiệu quả phụ thuộc vào chóa đèn và cách căn chỉnh sau lắp đặt.'],
+  ['Bi Pha Led Vislight LS800 Pro', 8800000, 9900000, 'Bi LED', 'Vislight', 'Universal', 'Vislight LS800 Pro là dòng bi pha LED hiệu năng cao, hướng tới khách cần ánh sáng mạnh và vùng chiếu xa tốt.', 'images/chungauto/bi-pha-led-vislight-ls800-pro.jpg', true, 'Cao cấp', 'Dòng sản phẩm này phù hợp xe thường đi đường trường, cao tốc hoặc khu vực thiếu sáng. Cấu hình bi pha giúp tối ưu cả cos và pha trong một cụm đèn.'],
+  ['Đèn bi gầm Nexway Vision V7 Eco New', 2650000, 3300000, 'Đèn gầm', 'Nexway', 'Universal', 'V7 Eco New là mẫu bi gầm dễ tiếp cận, hỗ trợ tăng sáng vùng gần và cải thiện quan sát khi thời tiết xấu.', 'images/chungauto/den-bi-gam-vision-v7-eco-new.jpg', false, 'Giảm 20%', 'Sản phẩm phù hợp người dùng muốn bổ sung ánh sáng gầm với chi phí vừa phải. Nên lắp đặt đúng vị trí và căn chỉnh để ánh sáng bám mặt đường hiệu quả.'],
+  ['Đèn bi gầm Nexway Vision V8 Eco New', 2650000, 3300000, 'Đèn gầm', 'Nexway', 'Universal', 'V8 Eco New nâng cấp ánh sáng gầm cho xe, hỗ trợ đi mưa và các đoạn đường tối cần vùng sáng thấp, rộng.', 'images/chungauto/den-bi-gam-vision-v8-eco-new.jpg', false, 'Hàng có sẵn', 'Dòng bi gầm này tập trung vào tính thực dụng: ánh sáng gần rõ hơn, dễ dùng trong đô thị và cung đường nhiều sương mù hoặc mưa nhẹ.'],
+  ['Đèn bi gầm Nexway Vision V7 Laser', 5500000, 6600000, 'Đèn gầm', 'Nexway', 'Universal', 'V7 Laser là phiên bản bi gầm có hiệu năng cao hơn, hỗ trợ pha xa tốt hơn so với các cấu hình gầm phổ thông.', 'images/chungauto/den-bi-gam-vision-v7-laser.jpg', true, 'Giảm 17%', 'Sản phẩm phù hợp khách cần đèn gầm mạnh, ánh sáng xa hơn và khả năng hỗ trợ tốt khi đi tour hoặc cung đường thiếu sáng dài.']
 ].map((item, index) => ({
   id: index + 1,
   name: item[0],
@@ -23,8 +23,9 @@ const products = [
   image: item[7],
   featured: item[8],
   badge: item[9],
+  detail: item[10],
   stock: 6 + index * 2,
-  images: [item[7], 'images/hero-showroom.png', index % 2 ? 'images/product-battery.png' : 'images/product-exhaust.png']
+  images: [item[7], 'images/hero-showroom.png', index % 2 ? 'images/chungauto/den-bi-led-nexway-ls600.jpg' : 'images/chungauto/den-bi-gam-vision-v7-platinum.jpg']
 }));
 
 const currency = value => value.toLocaleString('vi-VN') + ' đ';
@@ -90,7 +91,7 @@ function home() {
           <div>
             <span class="eyebrow">Sản phẩm nổi bật</span>
             <h2>Đèn ô tô</h2>
-            <p>Danh sách sản phẩm demo theo phong cách trang danh mục chuyên nghiệp.</p>
+            <p>Dữ liệu demo dùng ảnh sản phẩm và thông tin tham khảo từ ChungAuto, trình bày lại theo nhận diện MotoParts.</p>
           </div>
           <div class="toolbar">
             <label><i data-lucide="search"></i><input id="searchInput" placeholder="Tìm sản phẩm..."></label>
@@ -145,7 +146,6 @@ function bindCatalog() {
   const searchInput = document.querySelector('#searchInput');
   const sortSelect = document.querySelector('#sortSelect');
   const grid = document.querySelector('#grid');
-
   const render = () => {
     const query = searchInput.value.trim().toLowerCase();
     let list = products.filter(product => {
@@ -159,14 +159,12 @@ function bindCatalog() {
       }
       return matchQuery && matchCategory && matchPrice;
     });
-
     if (sortSelect.value === 'priceAsc') list = [...list].sort((a, b) => a.price - b.price);
     if (sortSelect.value === 'priceDesc') list = [...list].sort((a, b) => b.price - a.price);
     grid.innerHTML = productCards(list);
     lucide.createIcons();
     setupEffects();
   };
-
   searchInput.addEventListener('input', render);
   sortSelect.addEventListener('change', render);
   document.querySelectorAll('.side-filter').forEach(button => button.addEventListener('click', () => {
@@ -196,6 +194,7 @@ function detail(id) {
           <h1>${product.name}</h1>
           <div class="detail-price"><strong>${currency(product.price)}</strong><del>${currency(product.oldPrice)}</del></div>
           <p>${product.description}</p>
+          <p>${product.detail}</p>
           <div class="specs"><div><span>Thương hiệu</span><b>${product.brand}</b></div><div><span>Dòng xe</span><b>${product.model}</b></div><div><span>Tồn kho</span><b>${product.stock}</b></div><div><span>Tình trạng</span><b>Còn hàng</b></div></div>
           <div class="detail-actions"><a class="cta" href="https://zalo.me/0988888888" target="_blank"><i data-lucide="message-circle"></i>Liên hệ tư vấn</a><a class="ghost" href="#/">Xem thêm sản phẩm</a></div>
         </div>
